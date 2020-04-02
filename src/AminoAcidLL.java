@@ -17,6 +17,8 @@ class AminoAcidLL{
 
     aminoAcid = AminoAcidResources.getAminoAcidFromCodon(inCodon);
     codons =  AminoAcidResources.getCodonListForAminoAcid(aminoAcid);
+    counts = new int[codons.length];
+    
   }
 
   /********************************************************************************************/
@@ -33,6 +35,11 @@ class AminoAcidLL{
   /********************************************************************************************/
   /* Shortcut to find the total number of instances of this amino acid */
   private int totalCount(){
+
+    int sum = 0;
+    for( int i = 0; i < counts.length; i++){
+      sum += counts[i];
+    }
     return 0;
   }
 
